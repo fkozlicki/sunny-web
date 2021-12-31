@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+body {
+	font-family: Fraunces;
+}
+.navbar__menu__item {
+	a {
+		font-size: 1.2rem;
+	}
+	&:nth-child(4) {
+		a {
+			font-size: 1rem;
+		}
+	}
+}
+a {
+	font-family: Barlow;
+	font-size: 1.05rem;
+	@include media-lg {
+		font-size: 1.3rem;
+	}
+}
+
+i {
+	font-size: 1.4rem;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 2rem;
+	letter-spacing: 0.5rem;
+	color: $white;
+
+	@include media-md {
+		font-size: 3.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.6rem;
+	@include media-lg {
+		font-size: 2.4rem;
+	}
+}
+h3 {
+	font-size: 1.3rem;
+	font-weight: 900;
+	@include media-lg {
+		font-size: 1.8rem;
+	}
+}
+h4 {
+	font-size: 0.9rem;
+	font-weight: 900;
+	letter-spacing: 0.2rem;
+
+	@include media-lg {
+		font-size: 1.4rem;
+	}
+}
+h5 {
+	font-size: 1.1rem;
+	font-weight: 900;
+}
+h6 {
+	font-size: 0.85rem;
+	font-family: Barlow;
+	font-weight: 600;
+}
+p {
+	font-family: Barlow;
+	font-size: 0.9rem;
+	line-height: 1.6;
+
+	@include media-lg {
+		font-size: 1.105rem;
+	}
+}
+button {
+	font-family: Fraunces;
+	font-size: 0.905rem;
+
+	@include media-lg {
+		font-size: 1.1rem;
+	}
+}

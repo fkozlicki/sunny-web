@@ -1,0 +1,121 @@
+.header {
+	background: url("../../images/mobile/image-header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+
+	@include media-md {
+		background: url("../../images/desktop/image-header.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom center;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem 1.5rem;
+		position: relative;
+
+		&__menu {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			transition-duration: 300ms;
+
+			@media (max-width: 767px) {
+				flex-direction: column;
+				position: absolute;
+				left: 50%;
+				width: 85vw;
+				padding: 3rem 0;
+				transform: translateY(-100%) translateX(-50%);
+				background: $white;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -25px;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-bottom: 25px solid $white;
+				border-right: 25px solid transparent;
+				transform: rotate(-90deg);
+			}
+
+			&__item {
+				a {
+					color: $white;
+					transition-duration: 300ms;
+					@media (max-width: 767px) {
+						color: $very-dark-grayish-blue;
+					}
+					&:hover,
+					&:focus {
+						color: $very-dark-desaturated-blue;
+					}
+				}
+			}
+
+			&__item:nth-child(4) {
+				margin-bottom: 0;
+				a {
+					display: inline-block;
+					padding: 1rem 2rem;
+					font-family: Fraunces;
+					border-radius: 3rem;
+					background-color: $white;
+					color: $very-dark-desaturated-blue;
+
+					@media (max-width: 767px) {
+						background-color: $yellow;
+						color: $very-dark-desaturated-blue;
+					}
+
+					&:hover,
+					&focus {
+						color: $white;
+						background-color: rgba(255, 255, 255, 0.432);
+
+						@media (max-width: 767px) {
+							background-color: darken($yellow, 5%);
+						}
+					}
+				}
+			}
+		}
+
+		&__hamburger-container {
+			cursor: pointer;
+
+			@include media-md {
+				display: none;
+			}
+		}
+	}
+
+	.hero {
+		margin-top: 3rem;
+		text-align: center;
+		min-height: 103vw;
+
+		@include media-md {
+			min-height: 35vw;
+		}
+
+		&__title {
+			padding: 0 2rem;
+		}
+
+		&__arrow-container {
+			margin-top: 2.6rem;
+		}
+	}
+}
+
+.active {
+	transform: translateY(70%) translateX(-50%) !important;
+}

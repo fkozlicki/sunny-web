@@ -1,0 +1,13 @@
+.works {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include media-md {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}

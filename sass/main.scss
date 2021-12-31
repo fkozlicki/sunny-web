@@ -1,0 +1,30 @@
+@import "./mixins";
+@import "./colors";
+@import "./header";
+@import "./typography";
+@import "./services";
+@import "./testimonials";
+@import "./works";
+@import "./footer";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}

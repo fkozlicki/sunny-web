@@ -1,0 +1,44 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 4rem 0;
+	background: lighten($dark-moderate-cyan, 30%);
+
+	&__content {
+		text-align: center;
+		&__logo-container {
+			margin-bottom: 2.5rem;
+		}
+
+		&__web-links {
+			margin-bottom: 5rem;
+			ul {
+				display: flex;
+				gap: 3rem;
+
+				a {
+					transition-duration: 300ms;
+					color: $dark-moderate-cyan;
+
+					&:hover {
+						color: $white;
+					}
+				}
+			}
+		}
+		&__social-links {
+			display: flex;
+			justify-content: center;
+			gap: 1.8rem;
+			color: $dark-desaturated-cyan;
+
+			i {
+				cursor: pointer;
+				transition-duration: 300ms;
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+}
